@@ -15,7 +15,7 @@ class TeacherController extends Controller
     {
 
         $teachers = Teacher::all();
-        return view('Teachers.teacher', compact('teacher') );
+        return view('Teachers.teacher', compact('teachers') );
     }
 
     /**

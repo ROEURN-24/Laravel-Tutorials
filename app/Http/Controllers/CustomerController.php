@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Customer;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
 
 class CustomerController extends Controller
 {
@@ -12,9 +12,11 @@ class CustomerController extends Controller
      */
     public function customer()
     {
-        $posts = DB::table('customers')->get();
-        dd($posts);
-        return view('customers.customer');
+        
+    {
+        $customers = Customer::all();
+        return view('Customers.customer', compact('customers'));
+    }
     }
 
     /**
